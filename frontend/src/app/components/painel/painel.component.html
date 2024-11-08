@@ -19,7 +19,7 @@
     </header>
 
         <nav class="title">
-            <h3 class="title-nav">Status dos Processos de Apoio ao Portal</h3>
+            <h3 class="title-nav">Painel de Execuções</h3>
         </nav>
         <b><app-clock></app-clock></b>
         <main>
@@ -28,9 +28,9 @@
                     <thead>
                         <tr>
                             <th>Status</th>
-                            <th class="date">Processo</th>
+                            <th class="date">Atividade</th>
                             <th class="date">Última Execução</th>
-                            <th class="date">Limite de Próxima Execução</th>
+                            <th class="date">Limite para a Próxima Execução</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,16 +38,16 @@
                             <td class="status">
                                 <img src="/assets/img/gravando.png" alt="Status" width="20" height="20">
                               </td>
-                          <td>{{ processo.processo }}</td>
-                          <td>{{ processo.ultimaExec }}</td>
-                          <td>{{ processo.limiteExec }}</td>
+                          <td>{{ processo.nome }}</td>
+                          <td>{{ processo.ultimaAtualizacao }}</td>
+                          <td>{{ processo.proximaExecucao }}</td>
                           
                         </tr>
                       </tbody>
                 </table>
             </div>
 
-            <div class="tabela-agenda">
+            <!--<div class="tabela-agenda">
                 <h3>AGENDA  </h3>
                 <table>
                     <thead>
@@ -64,7 +64,8 @@
                     <tbody>
                       </tbody>
                 </table>
-            </div>
+            </div> -->
+
         </main>
 
     

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProcessosService {
-  private apiUrl = 'http://localhost:8080/ferramentas/processos';
+  private apiUrl = 'http://localhost:8080/api/atividades/execucoes';
 
   constructor(private http: HttpClient) {}
 
@@ -17,8 +17,8 @@ export class ProcessosService {
 
 // Defina a interface Processo
 export interface Processo {
-  processo: string;
-  ultimaExec: Date;
-  limiteExec: Date;
-  statusImage: string; // Adicione esta propriedade
+  nome: string;
+  descricao: string;
+  ultimaAtualizacao: string;
+  proximaExecucao: string; 
 }
