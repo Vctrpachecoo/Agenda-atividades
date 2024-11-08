@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header class="navbar">
+
+        <img src="/assets/img/tools2.jpg" alt="left-logo" class="navbar-image">
+
+
+        <div class="navbar-space"></div>
+
+
+        <img src="/assets/img/Santander2.jpg" alt="righ-logo" class="navbar-image">
+
+    </header>
+
+        <nav class="title">
+            <h3 class="title-nav">Status dos Processos de Apoio ao Portal</h3>
+        </nav>
+        <b><app-clock></app-clock></b>
+        <main>
+            <div class="tabela-processos">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th class="date">Processo</th>
+                            <th class="date">Última Execução</th>
+                            <th class="date">Limite de Próxima Execução</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let processo of processos">
+                            <td class="status">
+                                <img src="/assets/img/gravando.png" alt="Status" width="20" height="20">
+                              </td>
+                          <td>{{ processo.processo }}</td>
+                          <td>{{ processo.ultimaExec }}</td>
+                          <td>{{ processo.limiteExec }}</td>
+                          
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+
+            <div class="tabela-agenda">
+                <h3>AGENDA  </h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Quando</th>
+                            <th>Processo</th>
+                            <th>Descrição</th>
+                            <th>Frequência</th>
+                            <th class="date">Data Prevista</th>
+                            <th class="date">Última Execução</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      </tbody>
+                </table>
+            </div>
+        </main>
+
+    
+</body>
+</html>
